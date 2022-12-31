@@ -18,9 +18,25 @@ function reverse(str) {
 }
 
 // Alt solution(s)
-function reverse1(str) {
+function reverse2(str) {
     return str
         .split('')
         .reverse()
         .join('')
+}
+
+function reverse3(str) {
+    let reversed = '';
+
+    for (let char of str) {
+        reversed = char + reversed;
+    }
+
+    return reversed;
+}
+
+function reverse4(str) {
+    return str
+        .split('')
+        .reduce((acc, next) => next + acc);
 }
