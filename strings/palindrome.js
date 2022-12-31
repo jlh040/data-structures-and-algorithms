@@ -22,3 +22,14 @@ function palindrome(str) {
 
     return true;
 }
+
+// Alt solutions
+function palindrome2(str) {
+    let reversed = '';
+
+    for (let char of str) {
+        reversed = char + reversed;
+    }
+
+    return reversed === str;
+}
