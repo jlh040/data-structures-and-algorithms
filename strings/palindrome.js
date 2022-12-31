@@ -33,3 +33,11 @@ function palindrome2(str) {
 
     return reversed === str;
 }
+
+function palindrome3(str) {
+    const arr = str.split('');
+
+    return arr.every((elem, idx) => 
+        elem === arr[arr.length - 1 - idx]
+    )
+}
