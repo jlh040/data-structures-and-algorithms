@@ -27,3 +27,15 @@ function reverseInt(n) {
         return Number(reversed);
     }
 }
+
+function reverseInt2(n) {
+    const numAsString = n.toString();
+    let reversed = '';
+
+    for (let i = 0; i < numAsString.length; i++) {
+        if (numAsString[i] !== '-') {
+            reversed = numAsString[i] + reversed;
+        }
+    }
+    return parseInt(reversed * Math.sign(n));
+}
