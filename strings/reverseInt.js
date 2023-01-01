@@ -37,5 +37,5 @@ function reverseInt2(n) {
             reversed = numAsString[i] + reversed;
         }
     }
-    return parseInt(reversed * Math.sign(n));
+    return parseInt(reversed) * Math.sign(n);
 }
