@@ -39,3 +39,15 @@ function reverseInt2(n) {
     }
     return parseInt(reversed) * Math.sign(n);
 }
+
+function reverseInt3(n) {
+    const numAsString = n.toString();
+    let reversed = '';
+
+    for (let char of numAsString) {
+        if (char !== '-') {
+            reversed = char + reversed;
+        }
+    }
+    return parseInt(reversed) * Math.sign(n);
+}
