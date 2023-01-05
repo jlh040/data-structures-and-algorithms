@@ -17,7 +17,7 @@ function createCharMap(str) {
         }
     }
 
-    return charMap
+    return charMap;
 }
 
 function maxChar(str) {
