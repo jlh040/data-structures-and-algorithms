@@ -6,6 +6,16 @@
 // maxChar("apple 1231111") === "1"
 
 // Auxiliary function
+function createCharMapV2(str) {
+    const charMap = {};
+
+    for (let char of str) {
+        charMap[char] = charMap[char] + 1 || 1
+    }
+
+    return charMap;
+}
+
 function createCharMap(str) {
     const charMap = {};
 
