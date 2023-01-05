@@ -5,10 +5,9 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-function maxChar(str) {
+// Auxiliary function
+function createCharMap(str) {
     const charMap = {};
-    let highestKey;
-    let highestVal = -Infinity;
 
     for (let char of str) {
         if (char in charMap) {
@@ -17,6 +16,14 @@ function maxChar(str) {
             charMap[char] = 1;
         }
     }
+
+    return charMap
+}
+
+function maxChar(str) {
+    const charMap = createCharMap(str)
+    let highestKey;
+    let highestVal = -Infinity;
 
     for (let key in charMap) {
         if (charMap[key] > highestVal) {
