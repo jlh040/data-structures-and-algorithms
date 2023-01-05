@@ -21,7 +21,7 @@ function createCharMap(str) {
 }
 
 function maxChar(str) {
-    const charMap = createCharMap(str)
+    const charMap = createCharMap(str);
     let highestKey;
     let highestVal = -Infinity;
 
