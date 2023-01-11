@@ -30,3 +30,19 @@ function chunk(array, size) {
 
     return newArr;
 }
+
+function chunk2(array, size) {
+    const chunked = [];
+
+    for (let elem of array) {
+        const lastElem = chunked[chunked.length - 1];
+
+        if (!lastElem || lastElem.length === size) {
+            chunked.push([elem]);
+        } else {
+            lastElem.push(elem);
+        }
+    }
+
+    return chunked;
+}
