@@ -46,3 +46,6 @@ function chunk2(array, size) {
 
     return chunked;
 }
+
+function chunk3(array, size) {}
+
