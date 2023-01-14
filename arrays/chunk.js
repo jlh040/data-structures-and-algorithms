@@ -47,5 +47,15 @@ function chunk2(array, size) {
     return chunked;
 }
 
-function chunk3(array, size) {}
+function chunk3(array, size) {
+    const chunked = [];
+    let index = 0;
+
+    while (index < array.length) {
+        chunked.push(array.slice(index, size + index));
+        index += size;
+    }
+
+    return chunked;
+}
 
