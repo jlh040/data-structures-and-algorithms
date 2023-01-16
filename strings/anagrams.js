@@ -18,6 +18,8 @@ function createCharMap(str) {
             charMap[char] += 1;
         }
     }
+
+    return charMap;
 }
 
 function anagrams(stringA, stringB) {
