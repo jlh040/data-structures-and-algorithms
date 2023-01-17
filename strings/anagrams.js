@@ -26,4 +26,12 @@ function anagrams(stringA, stringB) {
     const strACharMap = createCharMap(stringA);
     const strBCharMap = createCharMap(stringB);
 
+    for (let key in strACharMap) {
+        if (!(strACharMap[key] === strBCharMap[key])) {
+            return false;
+        }
+    }
+
+    return true;
+
 }
