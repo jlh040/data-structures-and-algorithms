@@ -12,10 +12,12 @@ function createCharMap(str) {
     const charMap = {};
 
     for (let char of str) {
-        if (!charMap[char]) {
-            charMap[char] = 1;
+        let lowerChar = char.toLowerCase();
+
+        if (!charMap[lowerChar]) {
+            charMap[lowerChar] = 1;
         } else {
-            charMap[char] += 1;
+            charMap[lowerChar] += 1;
         }
     }
 
@@ -27,7 +29,7 @@ function anagrams(stringA, stringB) {
     const strBCharMap = createCharMap(stringB);
 
     for (let key in strACharMap) {
-        if (!(strACharMap[key] === strBCharMap[key])) {
+        if (strACharMap[key] !== strBCharMap[key]) {
             return false;
         }
     }
