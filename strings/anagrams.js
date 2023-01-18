@@ -11,13 +11,11 @@
 function createCharMap(str) {
     const charMap = {};
 
-    for (let char of str) {
-        let lowerChar = char.toLowerCase();
-
-        if (!charMap[lowerChar]) {
-            charMap[lowerChar] = 1;
+    for (let char of str.toLowerCase()) {
+        if (!charMap[char]) {
+            charMap[char] = 1;
         } else {
-            charMap[lowerChar] += 1;
+            charMap[char] += 1;
         }
     }
 
