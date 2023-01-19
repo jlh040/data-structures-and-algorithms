@@ -39,5 +39,4 @@ function anagrams(stringA, stringB) {
     }
 
     return true;
-
 }
