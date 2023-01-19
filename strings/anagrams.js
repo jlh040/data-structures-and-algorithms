@@ -8,14 +8,18 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
+const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
 function createCharMap(str) {
     const charMap = {};
 
     for (let char of str.toLowerCase()) {
-        if (!charMap[char]) {
-            charMap[char] = 1;
-        } else {
-            charMap[char] += 1;
+        if (alphabet.includes(char)) {
+            if (!charMap[char]) {
+                charMap[char] = 1;
+            } else {
+                charMap[char] += 1;
+            }
         }
     }
 
@@ -23,6 +27,8 @@ function createCharMap(str) {
 }
 
 function anagrams(stringA, stringB) {
+    if (stringA.length !== stringB.length) return false;
+
     const strACharMap = createCharMap(stringA);
     const strBCharMap = createCharMap(stringB);
 
