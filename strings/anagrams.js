@@ -23,7 +23,7 @@ function createCharMap(str) {
 }
 
 function anagrams(stringA, stringB) {
-    if (stringA.length !== stringB.length) return false;
+    if (stringA.replace(/[^\w]/g, "").length !== stringB.replace(/[^\w]/g, "").length) return false;
 
     const strACharMap = createCharMap(stringA);
     const strBCharMap = createCharMap(stringB);
