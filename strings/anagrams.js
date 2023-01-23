@@ -8,18 +8,15 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-
 function createCharMap(str) {
+    const newStr = str.replace(/[^\w]/g, "").toLowerCase();
     const charMap = {};
 
-    for (let char of str.toLowerCase()) {
-        if (alphabet.includes(char)) {
-            if (!charMap[char]) {
-                charMap[char] = 1;
-            } else {
-                charMap[char] += 1;
-            }
+    for (let char of newStr) {
+        if (!charMap[char]) {
+            charMap[char] = 1;
+        } else {
+            charMap[char] += 1;
         }
     }
 
