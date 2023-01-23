@@ -9,10 +9,9 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function createCharMap(str) {
-    const newStr = str.replace(/[^\w]/g, "").toLowerCase();
     const charMap = {};
 
-    for (let char of newStr) {
+    for (let char of str.replace(/[^\w]/g, "").toLowerCase()) {
         if (!charMap[char]) {
             charMap[char] = 1;
         } else {
