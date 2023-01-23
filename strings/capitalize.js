@@ -17,3 +17,17 @@ function capitalize(str) {
 
     return capitalizedWords.join(' ');
 }
+
+function capitalize2(str) {
+    let capitalizedStr = '';
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i - 1] === ' ' || !str[i - 1]) {
+            capitalizedStr += str[i].toUpperCase();
+        } else {
+            capitalizedStr += str[i];
+        }
+    }
+
+    return capitalizedStr;
+ }
