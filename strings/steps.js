@@ -44,3 +44,16 @@ function steps2(n) {
         console.log(stair);
     }
 }
+
+function steps3(n, row = 0, stair = '') {
+    if (n === row) {
+        return;
+    } else if (stair.length === n) {
+        console.log(stair);
+        steps(n, ++row)
+    } else if (stair.length <= row) {
+        steps(n, row, stair + '#')
+    } else {
+        steps(n, row, stair + ' ')
+    }
+}
