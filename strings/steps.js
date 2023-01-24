@@ -18,7 +18,6 @@
 //       '####'
 
 function steps(n) {
-    // create empty string
     let emptyString = '';
 
     for (let i = 1; i <= n; i++) {
