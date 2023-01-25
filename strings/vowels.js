@@ -8,12 +8,12 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-    const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+    const vowelSet = new Set(['a', 'e', 'i', 'o', 'u']);
     let numOfVowels = 0;
     
-    for (let char of str) {
-        if (vowels.has(char)) {
-            numOfVowels += 1;
+    for (let char of str.toLowerCase()) {
+        if (vowelSet.has(char)) {
+            numOfVowels++;
         }
     }
 
