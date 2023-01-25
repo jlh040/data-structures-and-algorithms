@@ -32,6 +32,7 @@ function pyramid(n) {
     }
 }
 
+// recursive implementation
 function pyramid2(n, row = 0, str = '') {
     const midpoint = Math.floor((2 * n - 1) / 2);
 
