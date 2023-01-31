@@ -8,7 +8,7 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {
+function fibRecursive(n) {
     if (n === 0) {
         return 0;
     } else if (n === 1) {
@@ -18,6 +18,6 @@ function fib(n) {
     }
 }
 
-function fib2(n) {
-    
+function fibIterative(n) {
+
 }
