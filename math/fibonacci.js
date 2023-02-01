@@ -29,3 +29,7 @@ function fibIterative(n) {
 
     return result[n];
 }
+
+function fibMemoized(n) {
+    
+}
