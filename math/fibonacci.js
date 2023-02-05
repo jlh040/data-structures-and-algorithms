@@ -12,7 +12,7 @@ function fibRecursive(n) {
     if (n < 2) {
         return n;
     } else {
-        return fib(n - 1) + fib(n - 2);
+        return fibMemoized(n - 1) + fibMemoized(n - 2);
     }
 }
 
