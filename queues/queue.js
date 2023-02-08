@@ -20,4 +20,8 @@ class Queue {
     remove() {
         return this.elements.pop();
     }
+
+    peek() {
+        return this.elements[this.elements.length - 1];
+    }
 }
