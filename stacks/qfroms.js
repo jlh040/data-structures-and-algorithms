@@ -29,7 +29,13 @@ class Queue {
             this.stack2.push(this.stack1.pop());
         }
 
-        return this.stack2.pop();
+        const dequeuedElem = this.stack2.pop();
+
+        while (this.stack2.peek()) {
+            this.stack1.push(this.stack2.pop());
+        }
+
+        return dequeuedElem;
     }
 
     peek() {
@@ -37,6 +43,12 @@ class Queue {
             this.stack2.push(this.stack1.pop());
         }
 
-        return this.stack2.peek();
+        const peekElem = this.stack2.peek();
+
+        while (this.stack2.peek()) {
+            this.stack1.push(this.stack2.pop());
+        }
+
+        return peekElem;
     }
 }
