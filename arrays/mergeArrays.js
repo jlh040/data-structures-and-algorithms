@@ -31,4 +31,6 @@ function mergeArrays(arr1, arr2) {
         mergedArr.push(arr2[j]);
         j++;
     }
+
+    return mergeArr;
 }
