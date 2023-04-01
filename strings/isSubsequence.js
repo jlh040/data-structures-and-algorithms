@@ -7,3 +7,23 @@
 // (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
 // Example: 
 //   isSubsequence("hat", "theater") --> true
+
+function isSubsequence(s, t) {
+    let i = 0;
+    let j = 0;
+
+    while (j < t.length) {
+        if (s[i] === j[t]) {
+            i++;
+            j++;
+        } else {
+            j++
+        }
+    }
+
+    if (i === s.length) {
+        return true;
+    }
+
+    return false;
+}
