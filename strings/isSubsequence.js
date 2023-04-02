@@ -12,18 +12,12 @@ function isSubsequence(s, t) {
     let i = 0;
     let j = 0;
 
-    while (j < t.length) {
-        if (s[i] === j[t]) {
+    while (i < s.length && j < t.length) {
+        if (s[i] === t[j]) {
             i++;
-            j++;
-        } else {
-            j++
         }
+        j++;
     }
 
-    if (i === s.length) {
-        return true;
-    }
-
-    return false;
+    return i === s.length;
 }
